@@ -1,0 +1,45 @@
+NAME
+
+    SML::Apache - apache handler for SML::Document
+
+     $Revision: 1.2 $
+     $Date: 2004/05/23 23:01:26 $
+
+SYNOPSIS
+
+     ...apache config 
+
+      <IfModule mod_perl.c>
+      ...
+        <Files ~ "\.info$">
+         SetHandler perl-script
+         PerlHandler SML::Apache
+         PerlSendHeader On
+         Options +ExecCGI
+        </Files>
+      ...
+      </IfModule>
+ 
+     ...apache config
+  
+DESCRIPTION
+
+METHODS
+
+     handler ($$)
+         $garbage = $CLASS->handler( $apache_request_object )
+
+    FastDebugDump ( )
+        Only for development debuging
+
+AUTHOR
+
+     Daniel Peder
+
+     <Daniel.Peder@Infoset.COM>
+     http://www.infoset.com
+
+SEE ALSO
+
+            SML::Parser SML::Document SML::Item SML::Block SML::Builder
+        
